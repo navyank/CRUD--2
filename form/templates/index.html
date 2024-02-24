@@ -1,0 +1,61 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <center><h1>Registration Form</h1></center>
+    <form method="post" action="/Regi">
+        {% csrf_token %}
+        <div class="container" style="width:50%">
+        <table class="table table-hover" border="1" width="50%">
+        <tr> 
+        <td>  
+        <label>Name:</label>
+        </td> 
+        <td>
+        <input type="text" name='name' placeholder="enter the name"><br>
+        </td>
+        </tr>
+        <tr> 
+        <td>  
+        <label>Place:</label>
+        </td>
+        <td>
+        <input type="text" name='place' placeholder="enter the place"><br>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <label>Age:</label>
+        </td>
+        <td>
+        <input type="text" name='age' placeholder="enter the age"><br>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <label>Email:</label>
+        </td>  
+        <td> 
+        <input type="email" name='email' placeholder="enter the email id">
+        </td>
+        </tr>
+        <br><br>
+    </table> 
+        <div align="center">
+        <input type="submit" value="SUBMIT"  class="btn btn-primary ">
+        
+        </div>
+       
+        </table> 
+        </div>
+    </form>    
+
+</body>
+</html>
